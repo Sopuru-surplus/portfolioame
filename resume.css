@@ -1,0 +1,123 @@
+
+
+body{
+    /*background-image: url('../portfolio/images/roonz-2xEQDxB0ss4-unsplash.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;*/
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: #ffeaa7;
+  }
+
+.navbar-nav{
+    margin-left: auto;
+    margin-right: auto;
+}
+  
+.container{
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: white;
+      overflow: auto;
+      height: 100%;
+      background: #ffeaa7;
+}
+
+.navbar-brand{
+    font-size: 35px;
+}
+
+.navbar{
+  position: fixed;
+  z-index: 20;
+  width: 100%;
+}
+
+#first{
+  margin-top: 100px;
+}
+
+.ex-detail{
+    display: none;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*.ex-sub:hover + .ex-detail{
+  display: inherit;
+}
+#c {
+  display: none;
+}
+.ex-detail:hover {
+  display: inherit;
+}*/
+
+.exp-heading{
+    width: ;
+    
+    
+    cursor: pointer;
+}
+
+.ex-sub{
+    width: ;
+    padding: 10px;
+    background: #f9ca24;
+    cursor: pointer;
+}
+
+h2{
+    margin-top: 50px;
+    color: red;
+}
+
+.num{
+    font-size: xx-large;
+}
+
+.client{
+  border-radius: 50%;
+}
+
+i{
+  float: right;
+  font-size: x-large;
+}
+
+.nav-link{
+  color: red;
+  padding: 10px;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.nav-link:hover{
+  border-bottom: 1px solid #f9ca24;
+  color: red;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar{
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: black;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .icon{
+    display: none;
+  }
+
+  .margi{
+    margin-top: 10px;
+  }
+}

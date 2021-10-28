@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="contact.css">
+    <title>Contact</title>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a href="" class="navbar-brand mr-3" style="color:red;"> <!--<span class="fa fa-camera"></span>-->SupTech</a>
+        
+        <button type="button" class="navbar-toggler" style="background: #f9ca24;" data-toggle="collapse" data-target="#navbarCollapse"> <span class="navbar-toggler-icon"></span> </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav">
+            <a href="index.html" class="nav-item nav-link mr-5">Home</a>
+
+            <a href="" class="nav-item nav-link dropdown mr-5" data-toggle="dropdown">Blog</a>
+            <a href="resume.html" class="nav-item mr-5 nav-link">Resume</a>
+            <a href="works.html" class="nav-item mr-5 nav-link">Works</a>
+            <a href="about.html" class="nav-item mr-5 nav-link">About</a>
+            <a href="contact.html" class="nav-item mr-5 nav-link" style="color: #f9ca24;">Contact</a>
+            </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="mx-3">
+        <h2 id="first">Contact</h2>
+        
+            <div class="row">
+                <form action="post" onsubmit="return Validate()" name="portform" class="col-sm-6">
+                    <div id="form_rows">
+                        <div class="labels">
+                            <label for="name" id="name-label">Name:</label>
+                        </div>
+                        <div class="fields">
+                            <input type="text" name="name" id="name" class="input-fields" placeholder="Enter your name">
+                            <div id="wrong_name"></div>
+                        </div>
+                    </div>
+    
+                    <div id="form_rows">
+                        <div class="labels">
+                            <label for="email" id="email-label">Email:</label>
+                        </div>
+                        <div class="fields">
+                            <input type="email" name="email" id="email" class="input-fields" placeholder="Enter your email address">
+                            <div id="wrong_email"></div>
+                        </div>
+                        <div id="form_rows">
+                            <div class="labels">
+                                <label for="event-details">Message:</label>
+                            </div>
+                            <div class="fields">
+                                <textarea class="input-fields" name="event-details" id="message" cols="1" rows="4" placeholder="Enter your message here" style="height: 80px;"></textarea>
+                                <div id="wrong_message"></div>
+                            </div>
+                        </div>
+                        <button type="submit" id="submit" >Send me a message</button>
+
+                    </div>
+                </form>
+
+                <div class="col-sm-6">
+                    <p> <span class="mr-2"><i class="fas fa-map-marker-alt"></i></span> No.18 Tanimowo street, Ondo State, Nigeria</p>
+                    <p> <span class="mr-2"><i class="fas fa-map-marker-alt"></i></span> No.18 Tanimowo street, Ondo State, Nigeria</p>
+                    <p> <span class="mr-2"><i class="fas fa-phone-alt"></i></span> +2347066231138</p>
+                    <p> <span class="mr-2"><i class="fas fa-envelope"></i></span> asomaduk@gmail.com / kingsdonscope@yahoo.com</p>
+                    <ul>
+                        <li class="facebook"><a href=""><i class="fab fa-facebook"></i></a></li>
+                        <li class="linkedin"><a href=""><i class="fab fa-linkedin"></i></a></li>
+                        <li class="instagram"><a href=""><i class="fab fa-instagram-square"></i></a></li>
+                        <li class="twitter"><a href=""><i class="fab fa-twitter-square" style="color: green;"></i></a></li>
+                        <li class="github"><a href=""><i class="fab fa-github"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="col-sm-12">
+                    <h2 class="text-center">Map</h2>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d252166.39753771384!2d7.254267261444708!3d9.054646211925292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e745f4cd62fd9%3A0x53bd17b4a20ea12b!2sAbuja!5e0!3m2!1sen!2sng!4v1632458490495!5m2!1sen!2sng" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+        function Validate() {
+            var username = document.getElementById('name');
+            var email = document.getElementById('email');
+            var message = document.getElementById('message');
+
+            var name_error = document.getElementById('wrong_name');
+            var email_error = document.getElementById('wrong_email');
+            var message_error = document.getElementById('wrong_message');
+     
+            //validating name
+            if (username.value == '') {
+                username.style.borderBottom = "1px solid red";
+                name_error.style.color = "red";
+                name_error.textContent = "Username is required to proceed";
+                username.focus();
+                return false;
+            }
+            if (username.value.length < 8 && username.value.length > 0) {
+                username.style.borderBottom = "1px solid red";
+                name_error.style.color = "red";
+                name_error.textContent = "Username must be at least 8 characters";
+                username.focus();
+                return false;
+            }
+            //validating email
+            if (email.value == "") {
+                email.style.borderBottom = "1px solid red";
+                email_error.style.color = "red";
+                email_error.textContent = "Email is required to proceed";
+                email.focus();
+                return false;
+            }
+           
+            if (atpos < 1 || (dotpos - atpos < 2)) {
+                email.style.borderBottom = "1px solid red";
+                email_error.style.color = "red";
+                email_error.textContent = "Email is invalid";
+                email.focus();
+                return false;
+            }
+            //validating textarea
+            if (message.value == "") {
+                username.style.borderBottom = "1px solid red";
+                message_error.style.color = "red";
+                message_error.textContent = "You can't leave an empty text";
+            }
+        }
+
+
+        /*var username = document.forms['portform'] ['name'];
+        var email = document.forms['portform'] ['email'];
+            
+        //select all error display elements
+        var name_error = document.getElementById('wrong_name');
+        var email_error = document.getElementById('wrong_email');
+        var atpos = email.indexOf('@');
+        var dotpos = email.lastIndexOf(".");
+
+        if (username.value == '') {
+                username.style.border = "1px solid red";
+                document.getElementById('username_div').style.color = "red";
+                name_error.textContent = "Username is required";
+                username.focus();
+                return false;
+            }
+            if (username.value.length < 8) {
+                username.style.border = "1px solid red";
+                document.getElementById('username_div').style.color = "red";
+                name_error.textContent = "Username must be at least 8 characters";
+                username.focus();
+                return false;77
+            }
+            //validating email
+            if (email.value == "") {
+                email.style.border = "1px solid red";
+                document.getElementById('email_div').style.color = "red";
+                email_error.textContent = "Email is required";
+                email.focus();
+                return false;
+            }
+           
+            if (atpos < 1 || (dotpos - atpos < 2)) {
+                email.style.border = "1px solid red";
+                document.getElementById('email_div').style.color = "red";
+                email_error.textContent = "Email is invalid";
+                email.focus();
+                return false;
+            }*/
+    </script>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+</body>
+</html>
