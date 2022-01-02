@@ -11,7 +11,7 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg" style="background-color: #ffeaa7;">
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <a href="" class="navbar-brand mr-3" style="color:red;"> <!--<span class="fa fa-camera"></span>-->SupTech</a>
         
@@ -34,25 +34,25 @@
         <h2 id="first">Work Experience</h2>
         <div class="experience">
             <div class="exp-heading">
-                <h5 onclick="experienceDropOne()" class="ex-sub">Physical and Health Education Teacher, NYSC, March 2020 - February 2021 Karu, Nasarawa State <span class="icon"><i class="fas fa-arrow-alt-circle-down"></i></span></h5>
+                <h5 onclick="experienceDropOne()" class="ex-sub">Physical and Health Education Teacher, NYSC, March 2020 - February 2021 Karu, Nasarawa State <span class="icon"><i id="iconOne" class="fas fa-arrow-circle-down"></i></span></h5>
             </div>
             
             <p class="ex-detail text-justify" id="detail-one">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo, ipsum! Obcaecati molestiae possimus placeat esse minus commodi amet animi corrupti exercitationem, saepe nihil corporis id porro deleniti omnis eligendi optio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus similique quasi velit reprehenderit error numquam, voluptas voluptatibus? Repudiandae, illum? Dolores minus cum perspiciatis aliquam labore ab, eum quibusdam non ratione?</p>
             
             <div class="exp-heading">
-                <h5 onclick="experienceDropOne()" class="ex-sub">Physical and Health Education Teacher, NYSC, March 2020 - February 2021 Karu, Nasarawa State <span class="icon"><i class="fas fa-arrow-alt-circle-down"></i></span></h5>
+                <h5 onclick="experienceDropTwo()" class="ex-sub">Physical and Health Education Teacher, NYSC, March 2020 - February 2021 Karu, Nasarawa State <span class="icon"><i id="iconTwo" class="fas fa-arrow-circle-down"></i></span></h5>
             </div>
             
             <p class="ex-detail text-justify" id="detail-two">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo, ipsum! Obcaecati molestiae possimus placeat esse minus commodi amet animi corrupti exercitationem, saepe nihil corporis id porro deleniti omnis eligendi optio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus similique quasi velit reprehenderit error numquam, voluptas voluptatibus? Repudiandae, illum? Dolores minus cum perspiciatis aliquam labore ab, eum quibusdam non ratione?</p>
 
             <div class="exp-heading">
-                <h5 onclick="experienceDropOne()" class="ex-sub">Physical and Health Education Teacher, NYSC, March 2020 - February 2021 Karu, Nasarawa State <span class="icon"><i class="fas fa-arrow-alt-circle-down"></i></span></h5>
+                <h5 onclick="experienceDropThree()" class="ex-sub">Physical and Health Education Teacher, NYSC, March 2020 - February 2021 Karu, Nasarawa State <span class="icon"><i id="iconThree" class="fas fa-arrow-circle-down"></i></span></h5>
             </div>
             
             <p class="ex-detail text-justify" id="detail-three">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo, ipsum! Obcaecati molestiae possimus placeat esse minus commodi amet animi corrupti exercitationem, saepe nihil corporis id porro deleniti omnis eligendi optio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus similique quasi velit reprehenderit error numquam, voluptas voluptatibus? Repudiandae, illum? Dolores minus cum perspiciatis aliquam labore ab, eum quibusdam non ratione?</p>
             
             <div class="exp-heading">
-                <h5 onclick="experienceDropOne()" class="ex-sub">Physical and Health Education Teacher, NYSC, March 2020 - February 2021 Karu, Nasarawa State <span class="icon"><i class="fas fa-arrow-alt-circle-down"></i></span></h5>
+                <h5 onclick="experienceDropFour()" class="ex-sub">Physical and Health Education Teacher, NYSC, March 2020 - February 2021 Karu, Nasarawa State <span class="icon"><i id="iconFour" class="fas fa-arrow-circle-down"></i></span></h5>
             </div>
             
             <p class="ex-detail text-justify" id="detail-four">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo, ipsum! Obcaecati molestiae possimus placeat esse minus commodi amet animi corrupti exercitationem, saepe nihil corporis id porro deleniti omnis eligendi optio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus similique quasi velit reprehenderit error numquam, voluptas voluptatibus? Repudiandae, illum? Dolores minus cum perspiciatis aliquam labore ab, eum quibusdam non ratione?</p>
@@ -61,15 +61,15 @@
         <div class="row">
             <h2 class="col-sm-12">Projects</h2>
             <div class="col-sm-4">
-                <p class="num text-center">8</p>
+                <p id="eight" class="num text-center"></p>
                 <p class="pro text-center">Personal projects completed</p>
             </div>
             <div class="col-sm-4">
-                <p class="num text-center">2</p>
+                <p id="two" class="num text-center"></p>
                 <p class="pro text-center">Ongoing projects</p>
             </div>
             <div class="col-sm-4">
-                <p class="num text-center">5</p>
+                <p id="five" class="num text-center"></p>
                 <p class="pro text-center">Group projects Completed</p>
             </div>
         </div>
@@ -77,7 +77,7 @@
         <div class="row">
             <h2 class="col-sm-12">Certifications</h2>
             <img src="images\coursera cert.PNG" alt="certificate" height="350" width="350" class="col-md-6">
-            <img class="margi" src="images\NH web design.PNG" alt="certificate" height="350" width="350" class="col-md-6">
+            <img src="images\NH web design.PNG" alt="certificate" height="350" width="350" class="col-md-6">
         </div>
 
         <div class="row">
@@ -119,8 +119,10 @@
             var details = document.getElementById("detail-one");
             if (details.style.display === "none") {
                 details.style.display = "block";
+                document.getElementById("iconOne").className = "fas fa-arrow-circle-up";
             }else{
                 details.style.display = "none";
+                document.getElementById("iconOne").className = "fas fa-arrow-circle-down";
             }
         }
         
@@ -128,8 +130,10 @@
             var details = document.getElementById("detail-two");
             if (details.style.display === "none") {
                 details.style.display = "block";
+                document.getElementById("iconTwo").className = "fas fa-arrow-circle-up";
             }else{
                 details.style.display = "none";
+                document.getElementById("iconTwo").className = "fas fa-arrow-circle-down";
             }
         }
 
@@ -137,8 +141,10 @@
             var details = document.getElementById("detail-three");
             if (details.style.display === "none") {
                 details.style.display = "block";
+                document.getElementById("iconThree").className = "fas fa-arrow-circle-up";
             }else{
                 details.style.display = "none";
+                document.getElementById("iconThree").className = "fas fa-arrow-circle-down";
             }
         }
 
@@ -146,11 +152,57 @@
             var details = document.getElementById("detail-four");
             if (details.style.display === "none") {
                 details.style.display = "block";
+                document.getElementById("iconFour").className = "fas fa-arrow-circle-up";
             }else{
                 details.style.display = "none";
+                document.getElementById("iconFour").className = "fas fa-arrow-circle-down";
             }
         }
 
+        /*function experienceDropOne(x) {
+            var x = document.querySelectorAll(".ex-detail")
+            for (let i = 0; i < x.length; i++) {
+                if (x[i].style.display === "none") {
+                x[i].style.display += "block";
+                }else{
+                x[i].style.display += "none";
+                }
+                
+            }
+            
+        }*/
+        var i = 0;
+        numEight = "12345678";
+        function count() {
+            if (i < numEight.length) {
+                document.getElementById("eight").innerHTML = numEight.charAt(i);
+                i++;
+                setTimeout(count, 800);
+            }
+        }
+        count();
+
+        var a = 0;
+        numTwo = "12";
+        function countTwo() {
+            if (a < numTwo.length) {
+                document.getElementById("two").innerHTML = numTwo.charAt(a);
+                a++;
+                setTimeout(countTwo, 800);
+            }
+        }
+        countTwo();
+
+        var p = 0;
+        numFive = "12345";
+        function countFive() {
+            if (p < numFive.length) {
+                document.getElementById("five").innerHTML = numFive.charAt(p);
+                p++;
+                setTimeout(countFive, 800);
+            }
+        }
+        countFive();
         
 
 

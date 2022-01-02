@@ -45,9 +45,9 @@ nav{
 }
   
 .nav-link:hover{
-    border-bottom: 1px solid #f9ca24;
-    color: red;
-    border-radius: 5px;
+    /*border-bottom: 1px solid #f9ca24;*/
+    color: #f9ca24;
+    /*border-radius: 5px;*/
 }
 
 #first{
@@ -125,15 +125,15 @@ p{
 }
 
 ::-webkit-scrollbar{
-    width: 4px;
+    width: 3px;
 }
   
 ::-webkit-scrollbar-thumb{
-    background-color: #f9ca24;
+    background-color: black;
 }
   
 ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey; 
+    box-shadow: inset 0 0 5px #f9ca24; 
     border-radius: 10px;
 }
 
@@ -148,5 +148,11 @@ iframe{
 
     iframe{
         height: 300px;
+    }
+}
+
+@media (max-width: 990px) {
+    nav{
+      background: black;
     }
 }
